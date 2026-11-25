@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Retirement guard: stop before downloads or changes to the host.
+printf '%s\n' "Fortytwo's Hitchhiking to AGI program has concluded and Fortytwo nodes are not running. Please do not install or run this software. News: https://x.com/fortytwo" >&2
+exit 1
+
+
 animate_text() {
     local text="$1"
     for ((i=0; i<${#text}; i++)); do
